@@ -10,24 +10,31 @@
     <main>
         <!-- intro -->
         <div id="game-intro">
-            <img src="./images/cover.jpg" alt="" class="intro-img"
+            <img src="./images/cover.jpg" alt="" class="intro-img"/>
             <button id="start-button">Start Game</button>
-            <p>Use left and right arrows to ove the  player.<br>Use up and down arrows to hit the balls</p>
+            <p>Use left and right arrows to move the  player.<br>Use up and down arrows to hit the balls</p>
         </div>
 
-        <div id="game-container">
-            <div>
-                <h2>Stats</h2>
-                <p>Forehand Strokes <span id="Forehand strokes"></span></p>
-                <p>backhand Strokes <span id="Backhand strokes"></span></p>
-                <p>Missing balls <span id="Missing balls"></span></p>
+        <div id="game-container" class="hidden">
             
-            </div>
+           
         </div>
+
+        
+
+        <!-- <div id="game-end">
+            <img src="./images/cover.jpg" alt="" class="intro-img"/>
+            <h1>Game Over</h1>
+            <br />
+            <button id="restart-button">Restart</button>
+         </div> -->
 
 
     </main>
+    <script type="text/javascript" src="game.js"></script>
+    <script type="text/javascript" src="player.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+
     
-    <script src="script.js"></script>
 </body>
 </html>
