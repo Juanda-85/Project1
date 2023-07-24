@@ -4,13 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>TennisPro</title>
 </head>
 <body>
-    <div class="container">
-        <div class="contenedor"></div>
+    <main>
+        <!-- intro -->
+        <div id="game-intro">
+            <img src="./images/cover.jpg" alt="" class="intro-img"
+            <button id="start-button">Start Game</button>
+            <p>Use left and right arrows to ove the  player.<br>Use up and down arrows to hit the balls</p>
+        </div>
 
-    </div>
+        <div id="game-container">
+            <div>
+                <h2>Stats</h2>
+                <p>Forehand Strokes <span id="Forehand strokes"></span></p>
+                <p>backhand Strokes <span id="Backhand strokes"></span></p>
+                <p>Missing balls <span id="Missing balls"></span></p>
+            
+            </div>
+        </div>
+
+
+    </main>
+    
     <script src="script.js"></script>
 </body>
 </html>
