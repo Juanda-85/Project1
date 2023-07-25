@@ -12,7 +12,7 @@ class Player {
         this.gameScreen.appendChild(this.tennisPlayer);
 
     }
-
+    // setting the boundaries
     move() {
         this.width = this.tennisPlayer.offsetWidth;
         this.left += this.directionX;
