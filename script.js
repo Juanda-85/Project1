@@ -20,16 +20,22 @@ window.onload = function () {
         gameContainerDiv.classList.remove("hidden")
 
     }
+    //MOVER USUARIO POR EL TABLERO
 
     function handleKeyboardInput(key) {
+        switch (key) {
+            case "ArrowLeft":
+                game.player.directionX = -5;
+                break;
 
-        if (key === "ArrowLeft") {
-            game.player.directionX = -1;
-        }
-        else if (key === "ArrowRight") {
-            game.player.directionX = 1;
+            case "ArrowRight":
+                game.player.directionX = 5;
+                break;
+
         }
     }
+
+
     window.addEventListener("keydown", (event) => {
         handleKeyboardInput(event.key)
     })
