@@ -17,8 +17,8 @@ class Player {
         this.width = this.tennisPlayer.offsetWidth;
         this.left += this.directionX;
         console.log(this.width);
-        if (this.left > this.gameScreen.offsetWidth - this.width) {
-            this.left = this.gameScreen.offsetWidth - this.width;
+        if (this.left > this.gameScreen.offsetWidth - this.width - 10) {
+            this.left = this.gameScreen.offsetWidth - this.width - 10;
         }
         if (this.left < 0) {
             this.left = 0

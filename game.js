@@ -6,11 +6,10 @@ class Game {
         this.gameScreen = document.getElementById("game-container");
 
         this.player = new Player(this.gameScreen, 200);
-
-
-
         this.width = '500px';
         this.height = '600px';
+        this.obstacles = [];
+
 
 
 
