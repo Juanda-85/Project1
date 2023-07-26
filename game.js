@@ -25,7 +25,7 @@ class Game {
     }
 
     gameLoop() {
-        console.log('GAME LOOP STARTED');
+
         if (this.gameIsOver) {
             console.log('THE game is over');
             return

@@ -12,12 +12,20 @@ window.onload = function () {
 
         game.start()
         //UNA VEZ INICIADO EL NEW GAME, OCULTAR EL ID GAME INTRO
+        const gameContainerDiv = document.getElementById("game-container");
         const gameIntroDiv = document.getElementById("game-intro");
         gameIntroDiv.classList.add("hidden")
 
         //UNA VEZ OCULTA LA ID GAME INTRO, VAMOS A MOSTRAR EL GAME-CONTAINER
-        const gameContainerDiv = document.getElementById("game-container");
         gameContainerDiv.classList.remove("hidden")
+        console.log(gameContainerDiv.offsetWidth);
+        const obstacle = new Obstacle(gameContainerDiv, game);
+
+        setInterval(() => {
+            new Obstacle(gameContainerDiv, game)
+        }, 1000)
+
+        obstacle.ballsMove()
 
     }
     //MOVER USUARIO POR EL TABLERO
@@ -40,47 +48,6 @@ window.onload = function () {
         handleKeyboardInput(event.key)
     })
 
-    //CREATING THE FALLING BALLS
-
-    function createObstacle() {
-        const obstacle = document.createElement("div");
-        gameContainer.appendChild(Obstacle);
-        obstacle.className = "obstacle";
-        obstacle.style.top = 0;
-        obstacle.style.left = (Math.random() * gameContainer.offSetWidth)
-            + "px";
-        game.obstacleArray.push(obstacle)
-    }
-
-    setInterval(() => {
-        createObstacle()
-    }, 1000);
-
-    // function moveballs() {
-    //     for (let i = 0; i < newGame.ballsArray.length; i++) {
-    //         let currentPosition = parseInt(newGame.ballsArray[i].style.top);
-    //         newGame.ballsArray[i].style.top = (currentPosition + 1) + "px";
-
-    //         if (newGame.ballsArray[i].offSetTop >= 495) {
-    //             newGame.ballsArray[i].remove();
-    //             newGame.ballsArray.splice(i, 1);
-    //         }
-    //     }
-    // }
-
-
 
 };
 
-// function createObstacle() {
-//     const obstacle = document.createElement("div");
-//     gameContainer.appendChild(obstacle);
-//     obstacle.className = "obstacle";
-//     obstacle.style.top = 0;
-//     obstacle.style.left = Math.random() * gameContainer.offsetWidth + "px";
-//     game.obstacleArray.push(obstacle);
-//   }
-  
-//   setInterval(() => {
-//     createObstacle();
-//   }, 1000);
