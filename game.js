@@ -1,17 +1,10 @@
 class Game {
-    // code to be added
     constructor() {
-
-
         this.gameScreen = document.getElementById("game-container");
 
-        this.player = new Player(this.gameScreen, 200);
+        this.player = new Player(this.gameScreen, 500);
         this.width = '500px';
         this.height = '600px';
-        this.obstacles = [];
-
-
-
 
         this.gameEndScreen = document.getElementById("game-end");
     }
@@ -40,5 +33,4 @@ class Game {
     update() {
         this.player.move();
     }
-
 }

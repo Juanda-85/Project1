@@ -19,27 +19,23 @@ window.onload = function () {
         //UNA VEZ OCULTA LA ID GAME INTRO, VAMOS A MOSTRAR EL GAME-CONTAINER
         gameContainerDiv.classList.remove("hidden")
         console.log(gameContainerDiv.offsetWidth);
-        const obstacle = new Obstacle(gameContainerDiv, game);
 
         setInterval(() => {
             new Obstacle(gameContainerDiv, game)
         }, 1000)
 
-        obstacle.ballsMove()
-
     }
-    //MOVER USUARIO POR EL TABLERO
 
+    //MOVER USUARIO POR EL TABLERO
     function handleKeyboardInput(key) {
         switch (key) {
             case "ArrowLeft":
-                game.player.directionX = -5;
+                game.player.directionX = -2;
                 break;
 
             case "ArrowRight":
-                game.player.directionX = 5;
+                game.player.directionX = 2;
                 break;
-
         }
     }
 
@@ -47,7 +43,5 @@ window.onload = function () {
     window.addEventListener("keydown", (event) => {
         handleKeyboardInput(event.key)
     })
-
-
 };
 

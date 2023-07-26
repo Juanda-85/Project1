@@ -10,13 +10,12 @@ class Player {
         this.tennisPlayer.style.left = `${left}px`;
 
         this.gameScreen.appendChild(this.tennisPlayer);
-
     }
     // setting the boundaries
     move() {
         this.width = this.tennisPlayer.offsetWidth;
         this.left += this.directionX;
-        console.log(this.width);
+
         if (this.left > this.gameScreen.offsetWidth - this.width - 10) {
             this.left = this.gameScreen.offsetWidth - this.width - 10;
         }
@@ -24,29 +23,12 @@ class Player {
             this.left = 0
         }
 
-
         this.updatePosition();
     }
 
     updatePosition() {
         this.tennisPlayer.style.left = `${this.left}px`;
-
     }
-
-    // didCollide(gameScreen) {
-    //     const playerHitBox = this.tennisPlayer.getBoundingClientRect();
-    //     const obstacleHitBox = gameScreen.tennisPlayer.getBoundingClientRect();
-    //     if (
-    //         playerHitBox.left < obstacleHitBox.right &&
-    //         playerHitBox.right > obstacleHitBox.left &&
-    //         playerHitBox.top < obstacleHitBox.bottom &&
-    //         playerHitBox.bottom > obstacleHitBox.top
-    //     ) {
-    //         return true;
-    //     } else {
-    //         return false;
-    //     }
-    // }
 }
 
 

@@ -6,38 +6,39 @@ class Obstacle {
         this.htmlElement = null
         this.ball = null
         this.top = 0
-        this.velocity = 2
+        this.velocity = 1
 
         this.createBall()
         this.ballsMove()
-
-
-
     }
-    createBall() {
 
+    createBall() {
         this.htmlElement = document.createElement("div")
 
         this.htmlElement.className = "balls";
 
-        let randomNumber = Math.floor(Math.random() * this.gameScreen.offsetWidth)
+        const randomNumber = Math.floor(Math.random() * this.gameScreen.offsetWidth - 15)
 
         this.htmlElement.style.left = randomNumber + "px"
 
         this.gameScreen.appendChild(this.htmlElement)
-
-
     }
-    ballsMove() {
 
+    removeBall() {
+        this.htmlElement.remove()
+    }
+
+    ballsMove() {
         this.top += this.velocity
         this.htmlElement.style.top = this.top + "px"
 
-        window.requestAnimationFrame(() => {
-            this.ballsMove()
+        if (this.top > 590) {
+            this.removeBall()
         }
 
-        )
+        window.requestAnimationFrame(() => {
+            this.ballsMove()
+        })
     }
 }
 
