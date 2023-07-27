@@ -6,7 +6,7 @@ class Game {
         this.width = '500px';
         this.height = '600px';
         this.score = 0;
-        this.lives = 5;
+        this.lives = 3;
         this.livesDisplay = document.getElementById("squareLives")
         this.gameEndScreen = document.getElementById("game-end");
         this.scoreDisplay = document.getElementsByClassName("square")
