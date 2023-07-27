@@ -20,11 +20,17 @@ window.onload = function () {
         gameContainerDiv.classList.remove("hidden")
         console.log(gameContainerDiv.offsetWidth);
 
-        setInterval(() => {
+
+        const enemies = setInterval(() => {
             new Obstacle(gameContainerDiv, game)
+            if (game.gameIsOver) {
+                clearInterval(enemies)
+            }
+
         }, 1000)
 
     }
+
 
     //MOVER USUARIO POR EL TABLERO
     function handleKeyboardInput(key) {

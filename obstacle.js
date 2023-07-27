@@ -33,8 +33,15 @@ class Obstacle {
         this.htmlElement.style.top = this.top + "px"
 
         if (this.top > 590) {
+            // aqui es donde restamos una vida del game this.game.lives -= 1
+
+
             this.removeBall()
+            this.game.lives -= 1
+            console.log(this.game.lives);
+            return false
         }
+
 
         window.requestAnimationFrame(() => {
             this.ballsMove()
