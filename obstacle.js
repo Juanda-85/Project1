@@ -32,7 +32,7 @@ class Obstacle {
         this.top += this.velocity
         this.htmlElement.style.top = this.top + "px"
 
-        if (this.top > 590) {
+        if (this.htmlElement.offsetTop > 590) {
             // aqui es donde restamos una vida del game this.game.lives -= 1
 
 

@@ -75,8 +75,15 @@ class Game {
     }
 
     gameOver() {
+
         this.gameIsOver = true
         console.log("Game Over"); this.scoreDisplay.textContent = `Score: ${this.score}`
+        this.player.tennisPlayer.remove();
+        this.score = 0;
+        const endGameScreen = document.getElementById("game-end")
+        this.gameScreen.style.display = "none"
+
+        endGameScreen.style.display = "block"
 
 
 

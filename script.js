@@ -4,9 +4,16 @@ window.onload = function () {
     let game;
     startButton.addEventListener("click", function () {
         startGame();
+
     });
 
+    restartButton.addEventListener("click", function () {
+        // startGame();
+        location.reload()
+    })
+
     function startGame() {
+
         console.log("start game");
         game = new Game();
 
@@ -15,6 +22,11 @@ window.onload = function () {
         const gameContainerDiv = document.getElementById("game-container");
         const gameIntroDiv = document.getElementById("game-intro");
         gameIntroDiv.classList.add("hidden")
+
+        const endGameScreen = document.getElementById("game-end")
+        endGameScreen.style.display = "none"
+        gameContainerDiv.style.display = "block"
+
 
         //UNA VEZ OCULTA LA ID GAME INTRO, VAMOS A MOSTRAR EL GAME-CONTAINER
         gameContainerDiv.classList.remove("hidden")
@@ -27,7 +39,7 @@ window.onload = function () {
                 clearInterval(enemies)
             }
 
-        }, 1000)
+        }, 2000)
 
     }
 
