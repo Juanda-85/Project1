@@ -33,7 +33,7 @@ class Obstacle {
         this.htmlElement.style.top = this.top + "px"
 
         if (this.htmlElement.offsetTop > 590) {
-            // aqui es donde restamos una vida del game this.game.lives -= 1
+            // HERE, WE SUBSTRACT ONE LIFE OF THE GAME this.game.lives -= 1
 
 
             this.removeBall()

@@ -18,7 +18,8 @@ window.onload = function () {
         game = new Game();
 
         game.start()
-        //UNA VEZ INICIADO EL NEW GAME, OCULTAR EL ID GAME INTRO
+
+        //ONCE INITIALIZED THE NEW GAME, THE ID GAME INTRO IS HIDDEN
         const gameContainerDiv = document.getElementById("game-container");
         const gameIntroDiv = document.getElementById("game-intro");
         gameIntroDiv.classList.add("hidden")
@@ -28,7 +29,7 @@ window.onload = function () {
         gameContainerDiv.style.display = "block"
 
 
-        //UNA VEZ OCULTA LA ID GAME INTRO, VAMOS A MOSTRAR EL GAME-CONTAINER
+        //ONCE THE ID GAME INTRO IS HIDDEN, SHOW THE GAME CONTAINER
         gameContainerDiv.classList.remove("hidden")
         console.log(gameContainerDiv.offsetWidth);
 
@@ -44,7 +45,7 @@ window.onload = function () {
     }
 
 
-    //MOVER USUARIO POR EL TABLERO
+    //MOVING THE PLAYER FROM ONE SIDE TO THE OTHER
     function handleKeyboardInput(key) {
         switch (key) {
             case "ArrowLeft":

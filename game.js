@@ -63,7 +63,7 @@ class Game {
                 playerHitBox.top < ballHitBox.bottom &&
                 playerHitBox.bottom > ballHitBox.top) {
 
-                // EN EL MOMENTO QUE HAYA UNA COLISIÓN SE CUMPLEN ESTAS CONDICIONES (SE EJECUTA EL CODIGO DENTRO DEL IF)
+                // ONCE THE COLLISION TAKES PLACE, THESE CONDITIONS ARE SET (EXECUTING THE CODE INSIDE THE "IF")
                 console.log("COLISION DETECTADA");
                 ball.remove()
                 this.score += 1

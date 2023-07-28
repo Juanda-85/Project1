@@ -12,8 +12,7 @@ body {
   }
   
   #game-container {
-    /* display: flex;
-    justify-content: center; */
+    
     border: 5px solid black;
     height: 500px;
     position: relative;
@@ -28,7 +27,7 @@ body {
     display: none;
     background-color: chocolate;
     height: 1000px;
-    /* width: 1000px; */
+   
   }
 
   
